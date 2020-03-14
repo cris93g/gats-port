@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import Carousel, { Modal, ModalGateway } from "react-images";
 
+
 class Gallery extends Component {
     constructor () {
         super();
@@ -38,6 +39,7 @@ class Gallery extends Component {
 
                     <h3>{obj.caption}</h3>
                     <p>{obj.description}</p>
+                    <li><a href={obj.ico} className="icon fa-github"><span className="label">Github</span></a></li>
                 </article>
             );
         });
@@ -59,6 +61,8 @@ class Gallery extends Component {
                     {lightboxIsOpen && (
                         <Modal onClose={this.toggleLightbox}>
                             <Carousel currentIndex={selectedIndex} views={images} />
+                           
+                            
                         </Modal>
                     )}
                 </ModalGateway>

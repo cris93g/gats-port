@@ -5,29 +5,39 @@ import Layout from '../components/layout'
 // import Lightbox from 'react-images'
 import Gallery from '../components/Gallery'
 
-import thumb01 from '../assets/images/thumbs/01.jpg'
-import thumb02 from '../assets/images/thumbs/02.jpg'
-import thumb03 from '../assets/images/thumbs/03.jpg'
-import thumb04 from '../assets/images/thumbs/04.jpg'
+import thumb01 from '../assets/images/thumbs/23.png'
+import thumb02 from '../assets/images/thumbs/22.png'
+import thumb03 from '../assets/images/thumbs/28.png'
+import thumb04 from '../assets/images/thumbs/24-2.png'
 import thumb05 from '../assets/images/thumbs/05.jpg'
 import thumb06 from '../assets/images/thumbs/06.jpg'
 
-import full01 from '../assets/images/fulls/01.jpg'
-import full02 from '../assets/images/fulls/02.jpg'
-import full03 from '../assets/images/fulls/03.jpg'
-import full04 from '../assets/images/fulls/04.jpg'
-import full05 from '../assets/images/fulls/05.jpg'
-import full06 from '../assets/images/fulls/06.jpg'
+import full01 from '../assets/images/fulls/leag.png'
+import full02 from '../assets/images/fulls/pac.png'
+import full03 from '../assets/images/fulls/dine.png'
+import full04 from '../assets/images/fulls/roomer.png'
+import full05 from '../assets/images/fulls/spac.png'
+
+import sv1 from "../assets/images/sv/js.svg"
+import sv2 from "../assets/images/sv/ex.svg"
+import sv3 from "../assets/images/sv/html.svg"
+import sv4 from "../assets/images/sv/node.svg"
+import sv5 from "../assets/images/sv/redux.svg"
+import sv6 from "../assets/images/sv/react.svg"
+import sv7 from "../assets/images/sv/post.svg"
+
+
 
 const DEFAULT_IMAGES = [
-    { id: '1', source: full01, thumbnail: thumb01, caption: 'Photo 1', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
-    { id: '2', source: full02, thumbnail: thumb02, caption: 'Photo 2', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
-    { id: '3', source: full03, thumbnail: thumb03, caption: 'Photo 3', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
-    { id: '4', source: full04, thumbnail: thumb04, caption: 'Photo 4', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
-    { id: '5', source: full05, thumbnail: thumb05, caption: 'Photo 5', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
-    { id: '6', source: full06, thumbnail: thumb06, caption: 'Photo 6', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'}
+    { id: '1', source: full01, thumbnail: thumb01, caption: 'My League Team', description: "React Native app that allows the user to use Riots Api to find he's teamates past games,ranks, and check if they are currently in a game.App use's React,Express,RiotAPI,Node.", ico: 'https://github.com/cris93g/ios_league'},
+    { id: '2', source: full02, thumbnail: thumb02, caption: 'Pac-clone', description: "React app that recreates pac-sun website user is able to view,search,and add to cart different items.App Use's React,Express,Node,Stripe,PostgreSQL.", ico:'https://github.com/cris93g/pac-clone'},
+    { id: '3', source: full03, thumbnail: thumb03, caption: 'Dine-Now', description: "Checks User's geolocation to map out nearby restaurants where they can check Restaurant's phone,price range, and user's reviews.App use's React,GoogleAPI,Express,NodeJs.", ico:'https://github.com/cris93g/DineNow'},
+    { id: '4', source: full04, thumbnail: thumb04, caption: 'Roomers', description: "Group developed app where user can either put their room out for rent or look for a place to move in. App use's AWS,Socket.io,GoogleAPI,MongoDb,Express,React,NodeJs.", ico:'https://github.com/barc-housing/Roomers'},
+   
+   
 ];
 
+const svs=[sv1,sv2,sv3,sv4,sv5,sv6,sv7]
 class HomeIndex extends React.Component {
 
     render() {
@@ -45,61 +55,51 @@ class HomeIndex extends React.Component {
 
                     <section id="one">
                         <header className="major">
-                            <h2>Ipsum lorem dolor aliquam ante commodo<br />
-                            magna sed accumsan arcu neque.</h2>
+                            <h2>Software Developer Based in Dallas TX</h2>
                         </header>
-                        <p>Accumsan orci faucibus id eu lorem semper. Eu ac iaculis ac nunc nisi lorem vulputate lorem neque cubilia ac in adipiscing in curae lobortis tortor primis integer massa adipiscing id nisi accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque cubilia.</p>
-                        <ul className="actions">
-                            <li><a href="#" className="button">Learn More</a></li>
-                        </ul>
+                        <p>My name is Cristian Gonzalez, and I am a Junior Web Developer. When I became 24 I thought I had life figured out, but it turned out that my enjoyment to learn every day took me to a different path. I went to a coding boot camp and from there on I have continued to find out, the more I learn, the more I don't know and that excitement is what keeps me smiling every day. </p>
+                      
+                        {svs.map(im =>{
+                            return(
+                                <img style={{maxWidth:'100px'}} src={im}/>
+                            )
+                        })}
                     </section>
 
                     <section id="two">
                         <h2>Recent Work</h2>
 
-                        <Gallery images={DEFAULT_IMAGES.map(({ id, source, thumbnail, caption, description }) => ({
+                        <Gallery images={DEFAULT_IMAGES.map(({ id, source, thumbnail, caption, description,ico }) => ({
                             source,
                             thumbnail,
                             caption,
-                            description
+                            description,
+                            ico
                         }))} />
 
-                        <ul className="actions">
-                            <li><a href="#" className="button">Full Portfolio</a></li>
-                        </ul>
+                        
                     </section>
 
                     <section id="three">
                         <h2>Get In Touch</h2>
-                        <p>Accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque lorem ipsum dolor.</p>
+                    
                         <div className="row">
-                            <div className="8u 12u$(small)">
-                                <form method="post" action="#">
-                                    <div className="row uniform 50%">
-                                        <div className="6u 12u$(xsmall)"><input type="text" name="name" id="name" placeholder="Name" /></div>
-                                        <div className="6u 12u$(xsmall)"><input type="email" name="email" id="email" placeholder="Email" /></div>
-                                        <div className="12u"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
-                                    </div>
-                                </form>
-                                <ul className="actions">
-                                    <li><input type="submit" value="Send Message" /></li>
-                                </ul>
-                            </div>
+                    
                             <div className="4u 12u$(small)">
                                 <ul className="labeled-icons">
                                     <li>
                                         <h3 className="icon fa-home"><span className="label">Address</span></h3>
-                                        1234 Somewhere Rd.<br />
-                                        Nashville, TN 00000<br />
+                                        2809 owen ln<br />
+                                       Mesquite, TX 75150<br />
                                         United States
                                     </li>
                                     <li>
                                         <h3 className="icon fa-mobile"><span className="label">Phone</span></h3>
-                                        000-000-0000
+                                        469-989-2254
                                     </li>
                                     <li>
                                         <h3 className="icon fa-envelope-o"><span className="label">Email</span></h3>
-                                        <a href="#">hello@untitled.tld</a>
+                                        <a href="#">christiandevwork@gmail.com</a>
                                     </li>
                                 </ul>
                             </div>
