@@ -15,7 +15,7 @@ import full01 from '../assets/images/fulls/leag.png'
 import full02 from '../assets/images/fulls/pac.png'
 import full03 from '../assets/images/fulls/dine.png'
 import full04 from '../assets/images/fulls/roomer.png'
-import full05 from '../assets/images/fulls/spac.png'
+
 
 import sv1 from "../assets/images/sv/js.svg"
 import sv2 from "../assets/images/sv/ex.svg"
