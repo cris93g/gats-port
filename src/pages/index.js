@@ -9,8 +9,7 @@ import thumb01 from '../assets/images/thumbs/23.png'
 import thumb02 from '../assets/images/thumbs/22.png'
 import thumb03 from '../assets/images/thumbs/28.png'
 import thumb04 from '../assets/images/thumbs/24-2.png'
-import thumb05 from '../assets/images/thumbs/05.jpg'
-import thumb06 from '../assets/images/thumbs/06.jpg'
+
 
 import full01 from '../assets/images/fulls/leag.png'
 import full02 from '../assets/images/fulls/pac.png'
