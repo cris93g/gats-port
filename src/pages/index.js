@@ -41,7 +41,7 @@ const svs=[sv1,sv2,sv3,sv4,sv5,sv6,sv7]
 class HomeIndex extends React.Component {
 
     render() {
-        const siteTitle = "Gatsby Starter - Strata"
+        const siteTitle = "Cristian|Gonzalez"
         const siteDescription = "Site description"
 
         return (
