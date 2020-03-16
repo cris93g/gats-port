@@ -40,6 +40,9 @@ class Gallery extends Component {
                     <h3>{obj.caption}</h3>
                     <p>{obj.description}</p>
                     <li><a href={obj.ico} className="icon fa-github"><span className="label">Github</span></a></li>
+                    {obj.caption =='Pac-clone' ? (
+                        (<li><a href='https://pacclone.xyz/#/' className="icon fa-desktop"><span className="label">Github</span></a></li>)
+                    ) : ''}
                 </article>
             );
         });
